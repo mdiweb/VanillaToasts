@@ -3,6 +3,10 @@
   "version": "1.6.0",
   "description": "Agnostic Javascript Library for Website Notifications",
   "main": "vanillatoasts.js",
+  "exports": {
+    ".": "./vanillatoasts.js"
+  },
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,17 +1,17 @@
-(function (root, factory) {
-  try {
-    // commonjs
-    if (typeof exports === 'object') {
-      module.exports = factory();
-      // global
-    } else {
-      root.VanillaToasts = factory();
-    }
-  } catch (error) {
-    console.log('Isomorphic compatibility is not supported at this time for VanillaToasts.')
-  }
-})(this, function () {
-
+// (function (root, factory) {
+//   // try {
+//   //   // commonjs
+//   //   if (typeof exports === 'object') {
+//   //     module.exports = factory();
+//   //     // global
+//   //   } else {
+//   //     root.VanillaToasts = factory();
+//   //   }
+//   // } catch (error) {
+//   //   console.log('Isomorphic compatibility is not supported at this time for VanillaToasts.')
+//   // }
+// })(this, function () {
+//
   // We need DOM to be ready
   if (document.readyState === 'complete') {
     init();
@@ -20,7 +20,7 @@
   }
 
   // Create VanillaToasts object
-  VanillaToasts = {
+  var VanillaToasts = {
     // In case toast creation is attempted before dom has finished loading!
     create: function () {
       console.error([
@@ -170,6 +170,6 @@
     }
   }
 
-  return VanillaToasts;
+  export default VanillaToasts;
 
-});
+// });
